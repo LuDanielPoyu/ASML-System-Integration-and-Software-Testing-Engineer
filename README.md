@@ -20,15 +20,16 @@
 
 ## Project 1 — YieldStar Log Quality-Assurance Automated Pipeline
 
-**Problem.** Engineers manually parsed logs from multiple sources, delaying defect discovery.  
-**Solution.** A validator packaged as a one-click tool that normalizes records, enforces schemas, flags anomalies, and caches results.
+**Problem:** Engineers manually parsed logs from multiple sources, delaying defect discovery.  
 
-**Highlights**
+**Solution:** A validator packaged as a one-click tool that normalizes records, enforces schemas, flags anomalies, and caches results.
+
+**Highlights:**
 - Validation & normalization: Utilize schema and regex checks, and normalize timestamps and fields.
 - Resilience: Caching and idempotent retries for unstable inputs.
 - Tooling & tests: Command-line tool (CLI) and synthetic fixtures for unit tests.
 
-**Impact**
+**Impact:**
 - Processing time **reduced ~90%**
 - Packaged as a one-click CLI and adopted by the Software Testing team, now used daily in log triage
 
@@ -53,16 +54,16 @@ flowchart LR
 
 ## P2 — Robot Framework API Test Suites & CI Quality Gates
 
-**Problem.** Yieldstar Machine Log's post-merge defects surfaced late and occasionally reached `main`.
+**Problem:** Yieldstar Machine Log's post-merge defects surfaced late and occasionally reached `main`.
 
-**Solution.** Robot Framework API test suites run in GitHub Actions; failing checks **block PR merges**. Test outputs are surfaced as **JUnit XML** in the PR UI, with coverage reported.
+**Solution:** Robot Framework API test suites run in GitHub Actions; failing checks **block PR merges**. Test outputs are surfaced as **JUnit XML** in the PR UI, with coverage reported.
 
-**Highlights**
+**Highlights:**
 - API checks: Ensure endpoints return correct status codes (e.g., 200/400), JSON matches the expected schema, and bad inputs produce clear errors.
 - Consistent CI: Run automatic `pre-commit` checks and execute CI inside Docker so tests behave the same on every machine.
 - Coverage: Use `pytest --cov` to report how much of the code is exercised by tests.
 
-**Impact**
+**Impact:**
 - **Post-merge defects ↓ ~80%**
 
 **Pipeline (simplified)**
@@ -80,17 +81,17 @@ flowchart LR
 
 ## P3 — React Log Viewer with Anomaly Flags
 
-**Problem.** Ops needed faster triage and clearer signals to move from logs to investigation state.
+**Problem:** Ops needed faster triage and clearer signals to move from logs to investigation state.
 
-**Solution.** A React web app that highlights anomalies via threshold and timestamp checks, supports filters and search, and links directly to the source record for follow-up.
+**Solution:** A React web app that highlights anomalies via threshold and timestamp checks, supports filters and search, and links directly to the source record for follow-up.
 
-**Highlights**
+**Highlights:**
 - See issues at a glance: Show row-level **anomaly badges** and time markers.
 - Work faster: **Filter** by module, severity, and time window and **instant search**.
 - One click to investigate: Build **deep links** to the exact record.
 - Smooth data loading: **React Query** handles fetch,caching, and retries; **TypeScript** for safer user interface code.
 
-**Impact**
+**Impact:**
 - **Handoff-to-investigation time ↓ ~60%**
 
 **UI Flow (simplified)**
@@ -106,17 +107,17 @@ flowchart LR
 
 ## P4 — Power BI Ops Dashboards
 
-**Problem.** Daily job health and anomaly trends were scattered across tools, making status reviews slow and inconsistent.
+**Problem:** Daily job health and anomaly trends were scattered across tools, making status reviews slow and inconsistent.
 
-**Solution.** A set of Power BI dashboards with daily refresh, health checks, and runbooks so ops can review status in minutes and know exactly what to do next.
+**Solution:** A set of Power BI dashboards with daily refresh, health checks, and runbooks so ops can review status in minutes and know exactly what to do next.
 
-**Highlights**
+**Highlights:**
 - **Pipeline health:** Show success rate, latency, retry counts, recent failures, and so on.
 - **Anomaly overview:** Flagged records by type, time, and module with drill-through and filters.
 - **Runbooks:** Links to step-by-step fixes, owners, and escalation paths.
 - **Reliable data flow:** Build Power Query (M) for shaping, scheduled refresh, and REST/CSV connectors bring in the sources.
 
-**Impact**
+**Impact:**
 - Faster daily reviews and clearer ownership and escalation during incidents
 - Used across **domestic and international** teams for daily status reviews and incident follow-ups
 
