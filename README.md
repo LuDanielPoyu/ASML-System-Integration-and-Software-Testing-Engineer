@@ -18,7 +18,7 @@
 
 ---
 
-## Project 1 — YieldStar Log Quality-Assurance Automated Pipeline
+## P1 — YieldStar Log Quality-Assurance Automated Pipeline
 
 **Problem:** Engineers manually parsed logs from multiple sources, delaying defect discovery.  
 
