@@ -1,6 +1,7 @@
 # ASML-System-Integration-and-Software-Testing-Engineer
 
 **Role:** System Integration & Software Testing Intern (Part-Time: 24 hrs/wk)  
+
 **When:** Jan 2024 – Dec 2024 · **Location:** Taipei, Taiwan  
 
 > **Disclaimer:** This portfolio uses sanitized descriptions and **synthetic examples only**. No proprietary code, data, screenshots, internal IDs, or configurations from ASML are included.
